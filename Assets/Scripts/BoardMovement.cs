@@ -5,6 +5,8 @@ using UnityEngine;
 public class BoardMovement : MonoBehaviour
 {
     public Transform myHazard;
+    public Transform[] myHazards;
+
     //public int myInt = 5;
     Vector3 startPos;
 
@@ -36,9 +38,30 @@ public class BoardMovement : MonoBehaviour
             transform.position += Vector3.back;
           }
 
-        if (transform.position == myHazard.position){
-          Debug.Log("BOOM");
-          transform.position = startPos;
+        // if (transform.position == myHazard.position){
+        //   Debug.Log("BOOM");
+        //   transform.position = startPos;
+        // }
+
+        for (int howManyTimesLoopHasRun = 0; howManyTimesLoopHasRun < myHazards.Length; howManyTimesLoopHasRun++){
+          if (transform.position == myHazards[howManyTimesLoopHasRun].position){
+            transform.position = startPos;
+          }
         }
+
+
+        for (int howManyTimesLoopHasRun = 0; howManyTimesLoopHasRun < 5; howManyTimesLoopHasRun++){
+          Debug.Log("howManyTimesLoopHasRun = " + howManyTimesLoopHasRun);
+        }
+
+
+
+
+
+        // for (int i = 0; i < myHazards.Length; i++){
+        //   if (transform.position == myHazards[i].position){
+        //     transform.position = startPos;
+        //   }
+        // }
     }
 }
