@@ -5,15 +5,19 @@ using UnityEngine;
 public class BoardMovement : MonoBehaviour
 {
     public Transform myHazard;
-    public Transform[] myHazards;
+    public Transform[] myHazards; //we declare an array of transforms which we will determine the size of in the inspector
 
     //public int myInt = 5;
     Vector3 startPos;
+
+    public AudioClip impact;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
       startPos = transform.position;
+      audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,30 +42,29 @@ public class BoardMovement : MonoBehaviour
             transform.position += Vector3.back;
           }
 
+        //example for using one hazard
         // if (transform.position == myHazard.position){
         //   Debug.Log("BOOM");
         //   transform.position = startPos;
         // }
 
+        //using a loop to run through each position in our array
+        //for (declaration and assignment; a condition to determine whether it should run each time; an update to our variable following each run);
         for (int howManyTimesLoopHasRun = 0; howManyTimesLoopHasRun < myHazards.Length; howManyTimesLoopHasRun++){
+
+          //we are checking if the position of the same transform as this gameobject is the same as each of our hazards
+          //to check each position in the array, we specify the position inside the square brackets
+          //by using the variable we created, it will run through each position in the array
           if (transform.position == myHazards[howManyTimesLoopHasRun].position){
             transform.position = startPos;
+            audioSource.PlayOneShot(impact, 0.7F);
           }
         }
 
-
+        //basic for loop example
         for (int howManyTimesLoopHasRun = 0; howManyTimesLoopHasRun < 5; howManyTimesLoopHasRun++){
           Debug.Log("howManyTimesLoopHasRun = " + howManyTimesLoopHasRun);
         }
 
-
-
-
-
-        // for (int i = 0; i < myHazards.Length; i++){
-        //   if (transform.position == myHazards[i].position){
-        //     transform.position = startPos;
-        //   }
-        // }
     }
 }
