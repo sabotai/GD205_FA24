@@ -60,7 +60,6 @@ public class BoardMovement : MonoBehaviour
             audioSource.PlayOneShot(impact, 0.7F);
           }
         }
-
         //basic for loop example
         for (int howManyTimesLoopHasRun = 0; howManyTimesLoopHasRun < 5; howManyTimesLoopHasRun++){
           Debug.Log("howManyTimesLoopHasRun = " + howManyTimesLoopHasRun);
