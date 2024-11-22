@@ -15,6 +15,7 @@ public class ThugProNavigator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //transform.LookAt(target); //example for scott
         //DvaAgent.SetDestination(target.position);
 
       Ray laser = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -26,5 +27,6 @@ public class ThugProNavigator : MonoBehaviour
             DvaAgent.SetDestination(laserImpactReport.point);
         }
       }
+    
     }
 }
