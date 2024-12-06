@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Week 2 - Basic Movement.unity
+    guid: 5e1de499ced754bf89500a27c87cc0ef
+  - enabled: 1
+    path: Assets/Scenes/Week 3 - Hazard.unity
+    guid: 48ed09245fbfa4d44b2f3821be6b0e34
+  - enabled: 1
     path: Assets/Scenes/Week 4 - Arrays.unity
     guid: 9c18765deec9a42bf97246c84bc4c725
+  - enabled: 1
+    path: Assets/Scenes/Week 5-6 - Physics.unity
+    guid: a6d5b61c1dd3e4587a7dcf00f06030d7
+  - enabled: 1
+    path: Assets/Scenes/Week 7 - Raycasting.unity
+    guid: 7ec7378a92d7a4da48a15995e25e4c3c
+  - enabled: 1
+    path: Assets/Scenes/Week 8 - Animator.unity
+    guid: eeaf0e9bd108547968e3ce1edb81e8f1
+  - enabled: 1
+    path: Assets/Scenes/Week 9 - AI Navmesh.unity
+    guid: 72df20e684ded45cba7ebe80bfe179bc
+  - enabled: 1
+    path: Assets/Scenes/Week 10 - AI Navmesh.unity
+    guid: ff1918d09fe8b4f3ba2d2bcae1cffa43
   m_configObjects: {}
